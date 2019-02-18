@@ -1,0 +1,2671 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Movie-App-Tmdb 1.0.0 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+  <link href='assets/split.css' type='text/css' rel='stylesheet' />
+  <meta name='description' content='React,Redux weather forecast app'>
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>Movie-App-Tmdb</h3>
+          <div class='mb1'><code>1.0.0</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#savegenreslist'
+                  class="">
+                  saveGenresList
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#savenowplaying'
+                  class="">
+                  saveNowPlaying
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#savecurrentplaying'
+                  class="">
+                  saveCurrentPlaying
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#saveimageurl'
+                  class="">
+                  saveImageUrl
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#handlegenrechange'
+                  class="">
+                  handleGenreChange
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#handleratingchange'
+                  class="">
+                  handleRatingChange
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#showerror'
+                  class="">
+                  showError
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fetchgenrelist'
+                  class="">
+                  fetchGenreList
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fetchnowplayingmovielist'
+                  class="">
+                  fetchNowPlayingMovieList
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fetchimageurl'
+                  class="">
+                  fetchImageUrl
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getnowplayingmovielist'
+                  class="">
+                  getNowPlayingMovieList
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getgenrelist'
+                  class="">
+                  getGenreList
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getimageurl'
+                  class="">
+                  getImageUrl
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#componentdidmount'
+                  class="">
+                  componentDidMount
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#styles'
+                  class="">
+                  styles
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#styles'
+                  class="">
+                  styles
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#styles'
+                  class="">
+                  styles
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#styles'
+                  class="">
+                  styles
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fetchgenresname'
+                  class="">
+                  fetchGenresName
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fetchgenresname'
+                  class="">
+                  fetchGenresName
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#handlesubmit'
+                  class="">
+                  handleSubmit
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#imagesize'
+                  class="">
+                  imageSize
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#movielist'
+                  class="">
+                  movieList
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cards'
+                  class="">
+                  cards
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#save_now_playing'
+                  class="">
+                  SAVE_NOW_PLAYING
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#genrereducer'
+                  class="">
+                  genreReducer
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#imagereducer'
+                  class="">
+                  imageReducer
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#nowplayingreducer'
+                  class="">
+                  nowPlayingReducer
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#configure'
+                  class="">
+                  configure
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#reducer'
+                  class="">
+                  reducer
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#store'
+                  class="">
+                  store
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='savegenreslist'>
+      saveGenresList
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This action creator triggers an action object to store the list of genres fetched from Genre API into the state.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>saveGenresList</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='savenowplaying'>
+      saveNowPlaying
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This action creator triggers an action object to store the list of npw playing movies fetched from Now Playing API into the state.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>saveNowPlaying</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='savecurrentplaying'>
+      saveCurrentPlaying
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This action creator triggers an action object to store the filtered list of movies into the state. These movies are filtered based on the Genres and Rating selection in the filter section.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>saveCurrentPlaying</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='saveimageurl'>
+      saveImageUrl
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This action creator triggers an action object to store the details of the Configuration API which is used to create the image url.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>saveImageUrl</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='handlegenrechange'>
+      handleGenreChange
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This action creator triggers an action object to store the array of genres selected in the Genre selection form element.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>handleGenreChange</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='handleratingchange'>
+      handleRatingChange
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This action creator triggers an action object to store the rating value selected in the Rating selection form element.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>handleRatingChange</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='showerror'>
+      showError
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This action creator triggers an action object to trigger SHOW_ERROR action object</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>showError</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fetchgenrelist'>
+      fetchGenreList
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This function makes an API call to TMDB Movie Genre api and store the response in the states.
+The response contains details of the list of genres for movies.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>fetchGenreList</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fetchnowplayingmovielist'>
+      fetchNowPlayingMovieList
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This function makes an API call to TMDB Now Playing api and store the response in the states
+The response contains details of the first page of the now playing movies</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>fetchNowPlayingMovieList</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>pageNumber</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    any number
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fetchimageurl'>
+      fetchImageUrl
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This function makes an API call to TMDB configuration api and store the response in the states
+The response contains details of the image URL to be called for fetching movie images.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>fetchImageUrl</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getnowplayingmovielist'>
+      getNowPlayingMovieList
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>API: Get Now Playing Movies</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getNowPlayingMovieList</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getgenrelist'>
+      getGenreList
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>API: Get Genres List</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getGenreList</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getimageurl'>
+      getImageUrl
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>API: Get Now Playing Movies List</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getImageUrl</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='componentdidmount'>
+      componentDidMount
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This function is responsible for calling 3 different input APIs and to dispatch actions to store the api response in store.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>componentDidMount()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Children of layout component is rendered inside the 'main' element present in the Layout component</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='styles'>
+      styles
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>JSS style css rules used in the component</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>styles</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>theme</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='styles'>
+      styles
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>JSS style css rules used in the component</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>styles</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='styles'>
+      styles
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>JSS style css rules used in the component</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>styles</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>theme</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='styles'>
+      styles
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>JSS style css rules used in the component</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>styles</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fetchgenresname'>
+      fetchGenresName
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This function is responsible for calling 3 different input APIs and to dispatch actions to store the api response in store.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>fetchGenresName</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>genreArr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    an array containing the id numbers of the genres
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code>:
+        an array cntaining the names of the genres that are present in the argument genreArr
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fetchgenresname'>
+      fetchGenresName
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This function is responsible for calling 3 different input APIs and to dispatch actions to store the api response in store.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>fetchGenresName</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>genreArr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    an array containing the id numbers of the genres
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code>:
+        an array cntaining the names of the genres that are present in the argument genreArr
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='handlesubmit'>
+      handleSubmit
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This function is responsible for calling 3 different input APIs and to dispatch actions to store the api response in store.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>handleSubmit</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>e</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>drawer variable contains the JSX for displaying the left side panel.
+This contains the logo, rating slider and the genres selection box.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>AppBar component is the top right navigation bar.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>main component contains the main display area of the application.
+List of movies is shown here.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Below div contains the footer part of the application</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='imagesize'>
+      imageSize
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>imageSize and imageUrl variables are used to construct the URL for fetching the image of the movies.
+Details of the image URL are fetched from the configuration api responsive
+imageSize - fetches the size of the image from the poster_sizes array of the response
+imageUrl - fetches the url of the image from the secure_base_url property of the response</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>imageSize</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='movielist'>
+      movieList
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>movieList contains the list of movies that needs to be shown in the main section of the appliation</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>movieList</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cards'>
+      cards
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>For every movie that needs to be shown, a card component is created and is stored in the cards variable.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>cards</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Genres for the movie is fetched and for every Genre of the movie, a Chip component is created and displayed</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Here we are checking if there are any movies that needs to be shown on the main screen. If not, a note is shown.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Form element to display the Genre selection box.
+Genres to be displayed are fetched from the genres property of the state.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>SLider component for the filtering movies based on their rating.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='save_now_playing'>
+      SAVE_NOW_PLAYING
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This file contains all the constants that are used in the action objects as 'type' value.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>SAVE_NOW_PLAYING</div>
+   
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This reducer method is to handle state related to application error.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This reducer method is to handle state related to filter components i.e. Slider and Multiselect component.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='genrereducer'>
+      genreReducer
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This reducer method is to store the list of genres fetched from the Genre API.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>genreReducer</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>state</span> <code class='quiet'>(any
+            = <code>initialState</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>action</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='imagereducer'>
+      imageReducer
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This reducer method is to store details related to image URL.
+The image URL is constructed from the result of the Configuration API of the TMDB API Service.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>imageReducer</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>state</span> <code class='quiet'>(any
+            = <code>initialState</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>action</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='nowplayingreducer'>
+      nowPlayingReducer
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This reducer method is to store details related to list of movies fetched from the Now Playing API.
+The image URL is constructed from the result of the Configuration API of the TMDB API Service.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>nowPlayingReducer</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>state</span> <code class='quiet'>(any
+            = <code>initialState</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>action</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='configure'>
+      configure
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This function is responsible for creating and initialising the store of the application. This store is then returned from the function.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>configure</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>initialState</span> <code class='quiet'>(any
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='reducer'>
+      reducer
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Here we create the root reducer by combining below given sub reducers.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>reducer</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='store'>
+      store
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This is to create the redux store.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>store</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
