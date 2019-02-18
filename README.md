@@ -14,8 +14,9 @@ Follow below steps to install in your local machine:
 * Build project and launch: npm run dev
 * Open your browser at: http://localhost:8080
 
-##Documentation
+## Documentation
 Please download docs folder in your local machine and run index.html file to view project documentation.
+Documentation can also be found in the wiki section of this repository.
 
 ## Functional Highlights
 * Integrates with the TMDB API to fetch and display movies
